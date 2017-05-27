@@ -17,7 +17,7 @@ int my_rand_disc(int n){
 double my_rand(){
     static long long int seed = std::chrono::system_clock::now().time_since_epoch().count();
     static std::default_random_engine generator(seed);
-    static std::uniform_real_distribution<double> distribution(0, 1);
+    static std::uniform_real_distribution<double> distribution(-0.5, 0.5);
     return distribution(generator);
 }
 
